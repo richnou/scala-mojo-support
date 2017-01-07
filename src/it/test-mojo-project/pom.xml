@@ -8,8 +8,8 @@
 	<name>test-scala-plugin Maven Mojo</name>
 
     <properties>
-      <scala.version>2.10.0</scala.version>
-      <scala-mojo-support.artifactId>scala-mojo-support_2.10</scala-mojo-support.artifactId>
+      <scala.version>2.12.1</scala.version>
+      <scala-mojo-support.artifactId>scala-mojo-support_2.12</scala-mojo-support.artifactId>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> 
    </properties>
 
@@ -59,7 +59,7 @@
 			</plugin>
 		    <plugin>
                 <artifactId>maven-invoker-plugin</artifactId>
-                <version>1.5</version>
+                <version>2.0.0</version>
                 <configuration>
                     <debug>true</debug>
                     <streamLogs>true</streamLogs>

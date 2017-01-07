@@ -18,7 +18,7 @@ class ScalaMojoDescriptionExtractor extends MojoDescriptorExtractor {
 	 * This is responsible for pulling mojo descriptions off of scala files in the project.
 	 */
     @throws(classOf[ExtractionException]) 
-	override def execute(request: PluginToolsRequest) : java.util.List[_]= {
+	override def execute(request: PluginToolsRequest) : java.util.List[org.apache.maven.plugin.descriptor.MojoDescriptor]= {
 		//TODO - parse through scala file and rip out MOJO annotations
     	val project = request.getProject
     	val pluginDescriptor = request.getPluginDescriptor
@@ -40,6 +40,6 @@ class ScalaMojoDescriptionExtractor extends MojoDescriptorExtractor {
 	}
     
     @throws(classOf[ExtractionException])
-    override def execute(project: MavenProject, pluginDescriptor: PluginDescriptor): java.util.List[_] =
+    def execute(project: MavenProject, pluginDescriptor: PluginDescriptor): java.util.List[_] =
     	execute(new DefaultPluginToolsRequest(project, pluginDescriptor))
 }
